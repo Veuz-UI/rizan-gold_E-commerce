@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rizan Gold</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/fav.png">
+  <link rel="stylesheet" href="assets/css/aos.css">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/font-awesome.css">
+  <link rel="stylesheet" href="assets/css//owl.carousel.min.css">
+  <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+
+  <header>
+    <div class="custom-container">
+      <div class="nav-top">
+        <div class="nav-cntnt">
+          <p class="test">Welcome to Rizan  <span id="word"></span></p>
+        </div>
+        <div class="nav-right">
+          <div class="dropdown" tab-index="0">
+            <button id="dropdown-btn"></button>
+            <ul class="dropdown-content" id="dropdown-content"></ul>
+          </div>
+  
+          <div class="head-btns">
+            <a href=""><button class="head-btn">Sign In</button></a>
+            <a href=""><button class="head-btn-2">Login</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="main-nav" id="navbar">
+        <div>
+          <a href="index.html"><img src="assets/img/rizan-logo.png" alt="" class="logo-width"></a>
+        </div>
+  
+        <div>
+          <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto mb-lg-0 w-100 justify-content-center gap-3 main-nav-links">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                  </li>
+  
+                  <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                  </li>
+  
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      Bars and Coins
+                    </a>
+                    <ul class="dropdown-menu menu-dropdown">
+                      <li><a class="dropdown-item" href="gold-bars.html">Gold Bars</a></li>
+                      <li><a class="dropdown-item" href="gold-coins.html">Gold Coins</a></li>
+                      <li><a class="dropdown-item" href="silver-bars.html">Silver Bars</a></li>
+                      <li><a class="dropdown-item" href="silver-coins.html">Silver Coins</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="product.html">Shop</a>
+                  </li>
+  
+                
+  
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                  </li>
+                </ul>
+  
+                <div class="main-nav-right-mobile">
+                  <div class="search">
+                    <input type="text" class="search__input" placeholder="Find Our Search">
+                    <button class="search__button">
+                      <img src="assets/img/search.svg" alt="">
+                    </button>
+                  </div>
+          
+                  <div class="cart-profile">
+                    <a href="profile.html"><img src="assets/img/profile.svg" alt=""></a>
+                    <a class="cart-icon" href="cart.html"><img src="assets/img/cart.svg" alt=""> <span>20</span></a>
+                  </div>
+                </div>
+  
+              </div>
+            </div>
+          </nav>
+        </div>
+  
+        <div class="main-nav-right">
+          <div class="search">
+            <input type="text" class="search__input" placeholder="Find Our Search">
+            <button class="search__button">
+              <img src="assets/img/search.svg" alt="">
+            </button>
+          </div>
+  
+          <div class="cart-profile">
+            <a href="profile.html"><img src="assets/img/profile.svg" alt=""></a>
+            <a class="cart-icon" href="cart.html"><img src="assets/img/cart.svg" alt=""> <span>20</span></a>
+          </div>
+        </div>
+      </div>
+  </header>
+
+
+
+      <div class="inner-banner d-flex align-items-center justify-content-center"
+      style="background-image: url('assets/img/inner-banner.jpg');">
+        <div class="inner-banner-content">
+          <p class="inner-banner-desc">Rizan Gold</p>
+          <h2 class="inner-banner-title">Products</h2>
+        </div>
+
+        <div class="inner-banner-breadcrumps">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>Cart</li>
+          </ul>
+        </div>
+      </div>
+
+
+
+      <section class="cart-section section-padding">
+        <div class="custom-container">
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="cart-items">
+                <div class="cart-item mb-2">
+                  <div class="cart-item-img">
+                    <img src="assets/img/gold-1.png" alt="Gold Bar">
+                  </div>
+                  <div class="cart-item-info">
+                    <h4>1 oz Gold Bar</h4>
+                    <p class="product-code">SKU: GB001</p>
+                    <div class="quantity-controls">
+                      <button class="qty-btn minus">-</button>
+                      <input type="number" value="1" min="1" class="qty-input">
+                      <button class="qty-btn plus">+</button>
+                    </div>
+                  </div>
+                  <div class="cart-item-price">
+                    <h5>$1,999.99</h5>
+                    <button class="remove-btn">
+                      <img src="assets/img/trash.svg" alt="Remove">
+                    </button>
+                  </div>
+                </div>
+
+                <div class="cart-item mb-2">
+                  <div class="cart-item-img">
+                    <img src="assets/img/gold-1.png" alt="Gold Bar">
+                  </div>
+                  <div class="cart-item-info">
+                    <h4>1 oz Gold Bar</h4>
+                    <p class="product-code">SKU: GB001</p>
+                    <div class="quantity-controls">
+                      <button class="qty-btn minus">-</button>
+                      <input type="number" value="1" min="1" class="qty-input">
+                      <button class="qty-btn plus">+</button>
+                    </div>
+                  </div>
+                  <div class="cart-item-price">
+                    <h5>$1,999.99</h5>
+                    <button class="remove-btn">
+                      <img src="assets/img/trash.svg" alt="Remove">
+                    </button>
+                  </div>
+                </div>
+
+                <div class="cart-item">
+                  <div class="cart-item-img">
+                    <img src="assets/img/gold-1.png" alt="Gold Bar">
+                  </div>
+                  <div class="cart-item-info">
+                    <h4>1 oz Gold Bar</h4>
+                    <p class="product-code">SKU: GB001</p>
+                    <div class="quantity-controls">
+                      <button class="qty-btn minus">-</button>
+                      <input type="number" value="1" min="1" class="qty-input">
+                      <button class="qty-btn plus">+</button>
+                    </div>
+                  </div>
+                  <div class="cart-item-price">
+                    <h5>$1,999.99</h5>
+                    <button class="remove-btn">
+                      <img src="assets/img/trash.svg" alt="Remove">
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="cart-summary">
+                <h4>Order Summary</h4>
+                <div class="summary-item">
+                  <span>Subtotal</span>
+                  <span>$1,999.99</span>
+                </div>
+                <div class="summary-item">
+                  <span>Shipping</span>
+                  <span>$25.00</span>
+                </div>
+                <div class="summary-item total">
+                  <span>Total</span>
+                  <span>$2,024.99</span>
+                </div>
+                <a href="checkout.html"><button class="checkout-btn">Proceed to Checkout</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      
+      <section class="footer">
+        <div class="custom-container">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="footer-logo">
+                <img src="assets/img/rizan-logo.png" alt="" class="logo-width">
+                  <div class="d-flex gap-5">
+                    <div class="footer-contact">
+                      <h6>Email</h6>
+                      <a href="">rizangold.com</a>
+                    </div>
+      
+                    <div class="footer-contact">
+                      <h6>Phone Number</h6>
+                      <a href="">+1 (201) 895-3801</a>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="row">
+                <div class="col-lg-3">
+                  <div class="footer-cl-links">
+                    <h6>Categories</h6>
+                    <ul>
+                      <li><a href="">Gold Bars</a></li>
+                      <li><a href="">Silver Bars</a></li>
+                    </ul>
+                  
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="footer-cl-links">
+                    <h6>Quick Links</h6>
+                    <ul>
+                      <li><a href="">Home</a></li>
+                      <li><a href="">Bars and Coins</a></li>
+                      <li><a href="">Shop </a></li>
+                      <li><a href="">About</a></li>
+                      <li><a href="">Contact Us</a></li>
+                    </ul>
+                  
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="footer-cl-links">
+                    <h6>Essential of Keep Popular</h6>
+                    
+                    <div class="footer-input">
+                      <input type="text" placeholder="Enter your email">
+                      <button class="head-btn"><span><img src="assets/img/send.svg" alt=""></span>Send</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom-wrapper">
+          <div class="custom-container">
+            <div class="footer-bottom-content">
+              <p>© 2025 Rizan Gold. All Rights Reserved.</p>
+              <div class="terms">
+                <ul>
+                  <li>Terms of Service</li>
+                  <li>Privacy Policy</li>
+                  <li>Cookies</li>
+                </ul>
+            </div>
+            </div>
+            
+            
+          </div>
+        </div>
+      </section> 
+ 
+
+
+  <!-- Place these scripts right before closing body tag -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.js"></script>
+  <script src="assets/js/font-awsome.js"></script>
+  <!-- Other scripts can follow -->
+  <script src="assets/js/script.js" defer></script>
+  <script src="assets/js/animation.js"></script>
+  <script src="assets/js/aos.js"></script>
+  <script src="assets/js/ScrollTrigger.js"></script>
+  <script src="assets/js/gsap.min.js"></script>
+  <script src="assets/js/lenis.min.js"></script>
+  <script src="assets/js/owl.carousel.min.js"></script>
+
+  <script>
+    $('#client-slider').owlCarousel({
+  loop: true,
+  margin: 10,
+  dots: false,
+  autoplay: true,
+  autoplayTimeout: 3000,
+  smartSpeed: 1000,
+  autoplayHoverPause: false,
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 3
+    },
+    1000: {
+      items: 5
+    }
+  }
+  });
+  </script>
+
+<script>
+  $('#testimonial-slider').owlCarousel({
+    loop: true,
+  margin: 10,
+  nav: false, // Disable navigation arrows
+  dots: false, // Disable navigation dots
+  autoplay: true,
+  autoplayTimeout: 5000,
+  autoplayHoverPause: true,
+  smartSpeed: 1000,
+  responsive: {
+      0: {
+          items: 1
+      },
+      600: {
+          items: 1
+      },
+      1000: {
+          items: 1
+      }
+  }
+});
+</script>
+
+<script>
+  // Smooth Scrolling
+  const lenis = new Lenis();
+
+let isScrolling = false;
+const scrollDelay = 100; // Delay in milliseconds
+
+lenis.on('scroll', (e) => {
+  if (!isScrolling) {
+    isScrolling = true;
+    setTimeout(() => {
+      isScrolling = false;
+    }, scrollDelay);
+  }
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+</script>   
+
+
+</body>
+
+</html>
