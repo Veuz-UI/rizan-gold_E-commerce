@@ -460,3 +460,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // aos
   AOS.init();
+
+
+
+  // navbar
+
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+
+    navbarCollapse.addEventListener('show.bs.collapse', function () {
+        navbarToggler.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+    });
+
+    navbarCollapse.addEventListener('hide.bs.collapse', function () {
+        navbarToggler.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = ''; // Restore scrolling
+    });
+});

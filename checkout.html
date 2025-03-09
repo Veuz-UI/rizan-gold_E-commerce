@@ -44,11 +44,13 @@
         <div>
           <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                    data-bs-target="#navbarSupportedContent" 
+                    aria-controls="navbarSupportedContent" 
+                    aria-expanded="false" 
+                    aria-label="Toggle navigation">
+                <span class="toggle-icon"></span>
+            </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav m-auto mb-lg-0 w-100 justify-content-center gap-3 main-nav-links">
                   <li class="nav-item">
@@ -140,7 +142,7 @@
         <div class="custom-container">
           <div class="row">
             <!-- Billing Details -->
-            <div class="col-lg-8">
+            <div class="col-lg-8" data-aos="fade-right" data-aos-duration="3000">
               <div class="checkout-form">
                 <h3>Billing Details</h3>
                 <form>
@@ -199,7 +201,7 @@
             </div>
       
             <!-- Order Summary -->
-            <div class="col-lg-4">
+            <div class="col-lg-4" data-aos="fade-left" data-aos-duration="3000">
               <div class="cart-summary">
                 <h4>Order Summary</h4>
                 <div class="summary-item">
@@ -225,7 +227,7 @@
                     <label for="paypal">PayPal</label>
                   </div>
                 </div>
-                <button class="checkout-btn">Proceed to Checkout</button>
+                <a href="index.html"><button class="checkout-btn">Proceed to Checkout</button></a>
               </div>
             </div>
           </div>
