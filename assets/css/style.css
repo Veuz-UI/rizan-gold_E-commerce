@@ -1717,14 +1717,14 @@ label {
     margin-bottom: 15px;
 }
 
-.total {
+/* .total {
     font-size: 18px;
     font-weight: bold;
     color: #0b2b25;
     border-top: 1px solid #eee;
     padding-top: 15px;
     margin-top: 15px;
-}
+} */
 
 .payment-methods {
     margin: 25px 0;
@@ -2412,7 +2412,7 @@ label {
 
 	.search__input{
 		padding-left: 10px;
-		background: #ffffff29;
+		background: #ffffff14;
 	}
 
 	.nav-right{
@@ -2488,6 +2488,13 @@ label {
 	}
 	.cart-item-price h5{
 		margin-bottom: 0px;
+	}
+	#banner-slider-main .owl-dots{
+		display: none !important;
+	}
+
+	.gold-bar-box h4{
+		width: 80%;
 	}
 }
 
