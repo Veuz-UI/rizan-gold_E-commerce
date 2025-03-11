@@ -2969,7 +2969,11 @@ label {
 
 	.main-image {
 		width: auto;
-		height: auto;
+		height: 250px;
+	}
+
+	.product-highlight-wrapper h4{
+		font-size: 24px;
 	}
 
 	.product-info {

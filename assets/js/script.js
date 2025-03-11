@@ -578,3 +578,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // filter button
 
+$(document).ready(function() {
+  $('#filterButton').click(function() {
+      $('#filterDiv').fadeToggle(500); 
+  });
+});
