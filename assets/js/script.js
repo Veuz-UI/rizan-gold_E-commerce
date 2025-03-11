@@ -41,7 +41,7 @@ $(function () {
     function startCount(counter) {
         const target = parseInt(counter.dataset.target);
         const duration = 10000;
-        const increment = target / (duration / 32); // 60fps
+        const increment = target / (duration / 32); 
         let current = 0;
   
         const updateCounter = () => {
@@ -233,11 +233,11 @@ $(function () {
   
       tabButtons.forEach(button => {
           button.addEventListener('click', () => {
-              // Remove active class from all buttons and panes
+              
               tabButtons.forEach(btn => btn.classList.remove('active'));
               tabPanes.forEach(pane => pane.classList.remove('active'));
   
-              // Add active class to clicked button and corresponding pane
+              
               button.classList.add('active');
               const tabId = button.getAttribute('data-tab');
               document.getElementById(tabId).classList.add('active');
@@ -280,12 +280,11 @@ const dropdownContent = document.getElementById("dropdown-content");
 function setSelectedLocale(locale) {
   const intlLocale = new Intl.Locale(locale);
   
-  // For the selected locale, include both language and region
+
   let langName = new Intl.DisplayNames([locale], {
     type: "language",
   }).of(intlLocale.language);
   
-  // Append region display name for the selected locale only
   if (intlLocale.region) {
     const regionName = new Intl.DisplayNames([locale], {
       type: "region",
@@ -296,17 +295,12 @@ function setSelectedLocale(locale) {
   // Clear current content
   dropdownContent.innerHTML = "";
   
-  // Create list items for all other locales except the selected one
   const otherLocales = locales.filter((loc) => loc !== locale);
   otherLocales.forEach((otherLocale) => {
     const otherIntlLocale = new Intl.Locale(otherLocale);
-    
-    // For other locales, only show language name without region
     let otherLangName = new Intl.DisplayNames([otherLocale], {
       type: "language",
     }).of(otherIntlLocale.language);
-    
-    // No region name added for options in the dropdown
     
     const listEl = document.createElement("li");
     listEl.innerHTML = `${otherLangName}<img src="${getFlagSrc(otherIntlLocale.region)}" />`;
@@ -320,16 +314,12 @@ function setSelectedLocale(locale) {
   dropdownBtn.innerHTML = `<img src="${getFlagSrc(intlLocale.region)}" />${langName}<span class="arrow-down"></span>`;
 }
 
-// Force initial selection to Singapore ("en-SG")
 setSelectedLocale("en-SG");
 
-// Optionally, if you still want to check for browser language and update the selection:
 const browserLang = new Intl.Locale(navigator.language).language;
 for (const locale of locales) {
   const localeLang = new Intl.Locale(locale).language;
   if (localeLang === browserLang) {
-    // Uncomment the next line if you want to change the default when the browser language matches one of the locales
-    // setSelectedLocale(locale);
   }
 }
 
@@ -425,7 +415,7 @@ const currencies = [
     }
   
     updatePrices() {
-      // Add your price conversion logic here
+      
       console.log(`Currency changed to ${this.currentCurrency.code}`);
     }
   }
@@ -436,8 +426,6 @@ const currencies = [
 
 
 //   profile
-
-
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.profile-nav .nav-link');
     const contentPanes = document.querySelectorAll('.profile-content');
@@ -446,11 +434,11 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', (e) => {
             e.preventDefault();
             
-            // Remove active class from all links and panes
+           
             navLinks.forEach(l => l.classList.remove('active'));
             contentPanes.forEach(p => p.classList.remove('active'));
 
-            // Add active class to clicked link and corresponding pane
+            
             link.classList.add('active');
             const tabId = link.getAttribute('data-tab');
             document.getElementById(tabId).classList.add('active');
@@ -460,12 +448,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // aos
   AOS.init();
-
+// aos
 
 
   // navbar
-
-
 
   document.addEventListener('DOMContentLoaded', function() {
     const navbarToggler = document.querySelector('.navbar-toggler');
@@ -473,11 +459,127 @@ document.addEventListener('DOMContentLoaded', function() {
 
     navbarCollapse.addEventListener('show.bs.collapse', function () {
         navbarToggler.setAttribute('aria-expanded', 'true');
-        document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+        document.body.style.overflow = 'hidden'; 
     });
 
     navbarCollapse.addEventListener('hide.bs.collapse', function () {
         navbarToggler.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = ''; // Restore scrolling
+        document.body.style.overflow = ''; 
     });
 });
+
+
+
+// filter
+
+class ProductFilter {
+  constructor() {
+      this.products = document.querySelectorAll('.category-boxes');
+      this.initFilters();
+  }
+
+  initFilters() {
+      const priceSlider = document.getElementById('priceSlider');
+      const minPrice = document.getElementById('minPrice');
+      const maxPrice = document.getElementById('maxPrice');
+
+      if (priceSlider && minPrice && maxPrice) {
+          priceSlider.addEventListener('input', (e) => {
+              maxPrice.value = e.target.value;
+          });
+
+          minPrice.addEventListener('input', this.validatePriceInput.bind(this));
+          maxPrice.addEventListener('input', this.validatePriceInput.bind(this));
+      }
+
+      document.getElementById('applyFilters')?.addEventListener('click', () => {
+          this.applyFilters();
+      });
+
+
+      document.getElementById('resetFilters')?.addEventListener('click', () => {
+          this.resetFilters();
+      });
+  }
+
+  validatePriceInput(e) {
+      let value = parseInt(e.target.value);
+      if (isNaN(value)) value = 0;
+      if (value < 0) value = 0;
+      if (value > 100000) value = 100000;
+      e.target.value = value;
+  }
+
+  applyFilters() {
+      const selectedWeights = Array.from(document.querySelectorAll('input[data-weight]:checked'))
+          .map(cb => parseFloat(cb.dataset.weight));
+      
+      const selectedManufacturers = Array.from(document.querySelectorAll('.filter-group:nth-child(2) input:checked'))
+          .map(cb => cb.value);
+
+      const minPrice = parseFloat(document.getElementById('minPrice').value) || 0;
+      const maxPrice = parseFloat(document.getElementById('maxPrice').value) || Infinity;
+
+      const availability = Array.from(document.querySelectorAll('.filter-group:nth-child(4) input:checked'))
+          .map(cb => cb.value);
+
+      this.products.forEach(product => {
+          let show = true;
+          const productPrice = this.extractPrice(product);
+          const productWeight = this.extractWeight(product);
+          const productManufacturer = this.extractManufacturer(product);
+          const isInStock = product.querySelector('.in-stock') !== null;
+
+          // Apply filters
+          if (selectedWeights.length && !selectedWeights.includes(productWeight)) show = false;
+          if (selectedManufacturers.length && !selectedManufacturers.includes(productManufacturer)) show = false;
+          if (productPrice < minPrice || productPrice > maxPrice) show = false;
+          if (availability.length) {
+              if (availability.includes('inStock') && !isInStock) show = false;
+              if (availability.includes('outOfStock') && isInStock) show = false;
+          }
+
+          product.style.display = show ? 'block' : 'none';
+      });
+  }
+
+  resetFilters() {
+      document.querySelectorAll('.filter-group input[type="checkbox"]').forEach(cb => {
+          cb.checked = false;
+      });
+      
+      document.getElementById('minPrice').value = '';
+      document.getElementById('maxPrice').value = '';
+      document.getElementById('priceSlider').value = 100000;
+
+      this.products.forEach(product => {
+          product.style.display = 'block';
+      });
+  }
+
+  extractPrice(product) {
+      const priceText = product.querySelector('.gold-count:first-child h6:last-child')?.textContent;
+      return parseFloat(priceText?.replace(/[^0-9.]/g, '')) || 0;
+  }
+
+  extractWeight(product) {
+      const weightText = product.querySelector('.item-cat-det h4')?.textContent;
+      return parseFloat(weightText?.match(/\d+(\.\d+)?/)?.[0]) || 0;
+  }
+
+  extractManufacturer(product) {
+      const text = product.querySelector('.item-cat-det h4')?.textContent;
+      return text?.match(/- (.+?) -/)?.[1]?.trim() || '';
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  new ProductFilter();
+});
+
+
+
+
+// filter button
+

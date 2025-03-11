@@ -381,90 +381,97 @@
 
   <script>
     var magnifierSize = 250; // Size of the magnifier
-    var magnification = 2; // Magnification power
+var magnification = 2; // Magnification power
 
-    function magnifier() {
-      this.magnifyImg = function (selector, magnification, magnifierSize) {
-        var $image = $(selector);
+function magnifier() {
+  this.magnifyImg = function (selector, magnification, magnifierSize) {
+    var $image = $(selector);
 
-        // Ensure the target is an image
-        if (!$image.is("img")) {
-          alert("Object must be an image.");
-          return false;
-        }
-
-        // Initialize the magnifier
-        this.init = function () {
-          $("body").prepend('<div class="magnify"></div>');
-        };
-
-        // Set up the magnifier on hover
-        $image.hover(
-          function () {
-            $(this).css("cursor", "none");
-            $(".magnify").show();
-
-            // Get image dimensions and position
-            var imageWidth = $(this).width();
-            var imageHeight = $(this).height();
-            var imageSrc = $(this).attr("src");
-            var imageOffset = $(this).offset();
-
-            // Set magnifier size and background
-            $(".magnify").css({
-              "background-size": imageWidth * magnification + "px " + imageHeight * magnification + "px",
-              "background-image": 'url("' + imageSrc + '")',
-              width: magnifierSize,
-              height: magnifierSize
-            });
-
-            // Calculate magnifier offset
-            var magnifyOffset = magnifierSize / 2;
-
-            // Track mouse movement
-            $(document).mousemove(function (e) {
-              var mouseX = e.pageX;
-              var mouseY = e.pageY;
-
-              // Check if the mouse is outside the image
-              if (
-                mouseX < imageOffset.left - magnifyOffset / 2 ||
-                mouseX > imageOffset.left + imageWidth + magnifyOffset / 2 ||
-                mouseY < imageOffset.top - magnifyOffset / 2 ||
-                mouseY > imageOffset.top + imageHeight + magnifyOffset / 2
-              ) {
-                $(".magnify").hide();
-                $(document).unbind("mousemove");
-                return;
-              }
-
-              // Calculate background position
-              var bgX = -((mouseX - imageOffset.left) * magnification - magnifyOffset);
-              var bgY = -((mouseY - imageOffset.top) * magnification - magnifyOffset);
-
-              // Position the magnifier
-              $(".magnify").css({
-                left: mouseX - magnifyOffset,
-                top: mouseY - magnifyOffset,
-                "background-position": bgX + "px " + bgY + "px"
-              });
-            });
-          },
-          function () {
-            // Hide the magnifier when the mouse leaves the image
-            $(".magnify").hide();
-            $(document).unbind("mousemove");
-          }
-        );
-
-        // Initialize the magnifier
-        this.init();
-      };
+    // Ensure the target is an image
+    if (!$image.is("img")) {
+      alert("Object must be an image.");
+      return false;
     }
 
-    // Create a new magnifier instance
-    var magnify = new magnifier();
-    magnify.magnifyImg(".magnifyImg-show", magnification, magnifierSize);
+    // Initialize the magnifier
+    this.init = function () {
+      $("body").append('<div class="magnify"></div>'); // Append to body
+      $(".magnify").css({
+        position: "absolute",
+        border: "2px solid #be955b",
+        overflow: "hidden",
+        pointerEvents: "none", // Ensure the magnifier doesn't interfere with mouse events
+        zIndex: 9999, // Ensure the magnifier is above the image
+        display: "none"
+      });
+    };
+
+    // Set up the magnifier on hover
+    $image.hover(
+      function () {
+        $(this).css("cursor", "none");
+        $(".magnify").show();
+
+        // Get image dimensions and position
+        var imageWidth = $(this).width();
+        var imageHeight = $(this).height();
+        var imageSrc = $(this).attr("src");
+        var imageOffset = $(this).offset();
+
+        // Set magnifier size and background
+        $(".magnify").css({
+          "background-size": imageWidth * magnification + "px " + imageHeight * magnification + "px",
+          "background-image": 'url("' + imageSrc + '")',
+          width: magnifierSize,
+          height: magnifierSize
+        });
+
+        // Calculate magnifier offset
+        var magnifyOffset = magnifierSize / 2;
+
+        // Track mouse movement
+        $(document).mousemove(function (e) {
+          var mouseX = e.pageX;
+          var mouseY = e.pageY;
+
+          // Check if the mouse is outside the image
+          if (
+            mouseX < imageOffset.left ||
+            mouseX > imageOffset.left + imageWidth ||
+            mouseY < imageOffset.top ||
+            mouseY > imageOffset.top + imageHeight
+          ) {
+            $(".magnify").hide();
+            return;
+          }
+
+          // Calculate background position
+          var bgX = -((mouseX - imageOffset.left) * magnification - magnifyOffset);
+          var bgY = -((mouseY - imageOffset.top) * magnification - magnifyOffset);
+
+          // Position the magnifier
+          $(".magnify").css({
+            left: mouseX - magnifyOffset,
+            top: mouseY - magnifyOffset,
+            "background-position": bgX + "px " + bgY + "px"
+          });
+        });
+      },
+      function () {
+        // Hide the magnifier when the mouse leaves the image
+        $(".magnify").hide();
+        $(document).off("mousemove"); // Unbind mousemove event
+      }
+    );
+
+    // Initialize the magnifier
+    this.init();
+  };
+}
+
+// Create a new magnifier instance
+var magnify = new magnifier();
+magnify.magnifyImg(".magnifyImg-show", magnification, magnifierSize);
   </script>
 
 

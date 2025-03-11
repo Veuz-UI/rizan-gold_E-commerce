@@ -138,33 +138,173 @@
     </div>
   </div>
 
+
+
   <section class="section-padding">
     <div class="custom-container">
       <div class="row">
         <div class="col-lg-8">
-          <div class="row">
-            <div class="col-lg-6" data-aos="fade-right" data-aos-duration="3000">
-              <div class="inner-lists">
-                <img src="assets/img/gold-2.png" alt="">
-                <div>
-                  <h5>1 Kilogram Gold Bullion Bars</h5>
-                  <p>Manufacturer: Various</p>
-                  <p> Purity: 99.99%</p>
+          <div class="filter-btn-section">
+              <div class="d-flex align-items-center gap-3 mb-2">
+                <h4>Gold</h4>
+                <button class="head-btn" id="filterButton">Filter Products <span><i class="fas fa-filter"></i></span></button>
+                <span class="filter-hint">71 matches with current filter</span>
+              </div>
+            <section class="filter-section" id="filterDiv">
+              <div class="row">
+                <div class="col-lg-12">
+                    <div class="filters-wrapper">
+                      <div class="filter-groups">
+                        <!-- Weight Filter -->
+                        <div class="filter-group">
+                          <h5>Weight</h5>
+                          <div class="checkbox-group">
+                            <label><input type="checkbox" value="1kg" data-weight="1"> Less 1 oz</label>
+                            <label><input type="checkbox" value="500g" data-weight="0.5"> 1 oz g</label>
+                            <label><input type="checkbox" value="250g" data-weight="0.25"> More 1 oz</label>
+                          </div>
+                        </div>
+                        
+                        <!-- Manufacturer Filter -->
+                        <div class="filter-group">
+                          <h5>Issuing Country</h5>
+                          <div class="checkbox-group">
+                            <label><input type="checkbox" value="Metalor"> Switzerland</label>
+                            <label><input type="checkbox" value="Argor-Heraeus"> Australia </label>
+                            <label><input type="checkbox" value="PAMP"> Canada</label>
+                          </div>
+                        </div>
+                
+                        <div class="filter-group">
+                          <h5>Availability</h5>
+                          <div class="checkbox-group">
+                            <label><input type="checkbox" value="inStock"> In Stock</label>
+                            <label><input type="checkbox" value="outOfStock"> Out of Stock</label>
+                          </div>
+                        </div>
+                
+                        <div class="filter-group">
+                          <h5>Year</h5>
+                          <div class="checkbox-group">
+                            <label><input type="checkbox" value="Metalor"> 2025</label>
+                            <label><input type="checkbox" value="Argor-Heraeus"> 2024 </label>
+                            <label><input type="checkbox" value="PAMP"> Previous Years</label>
+                          </div>
+                        </div>
+                
+                        <!-- Price Range Filter -->
+                        <div class="filter-group">
+                          <h5>Price Range (USD)</h5>
+                          <div class="price-range">
+                            <div class="range-inputs">
+                              <input type="number" id="minPrice" placeholder="Min">
+                              <span>-</span>
+                              <input type="number" id="maxPrice" placeholder="Max">
+                            </div>
+                            <input type="range" id="priceSlider" min="0" max="100000" step="100" class="price-slider">
+                          </div>
+                        </div>
+                
+                        <!-- Availability Filter -->
+                        
+                      </div>
+                
+                      <!-- Filter Actions -->
+                      <div class="filter-actions">
+                        <button id="applyFilters" class="head-btn">Apply Filters</button>
+                        <button id="resetFilters" class="head-btn-2">Reset</button>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          
+          <div class="category-box-wrapper">
+            <div class="row box-main-cntnt">
+              <div class="col-lg-6" data-aos="fade-right" data-aos-duration="3000">
+                <div class="inner-lists">
+                  <img src="assets/img/gold-3.png" alt="">
+                  <div>
+                    <h5>1 Kilogram Gold Bullion Bars</h5>
+                    <p>Manufacturer: Various</p>
+                    <p> Purity: 99.99%</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6" data-aos="fade-left" data-aos-duration="3000">
+                <div class="product-data">
+                  <ul>
+                    <li>1 Kilogram Gold Bullion Bars from manufacturers who are on the LBMA Good Delivery List.</li>
+                    <li>Each 1 Kilogram Gold Bullion Bar contains 1 Kilogram of liure gold minted at 99.99% liurity.</li>
+                    <li>1 Kilogram Gold Bullion Bars offers customers the more cost effective way to acquire Gold.</li>
+                  </ul>
                 </div>
               </div>
             </div>
-            <div class="col-lg-6" data-aos="fade-left" data-aos-duration="3000">
-              <div class="product-data">
-                <ul>
-                  <li>1 Kilogram Gold Bullion Bars from manufacturers who are on the LBMA Good Delivery List.</li>
-                  <li>Each 1 Kilogram Gold Bullion Bar contains 1 Kilogram of liure gold minted at 99.99% liurity.</li>
-                  <li>1 Kilogram Gold Bullion Bars offers customers the more cost effective way to acquire Gold.</li>
-                </ul>
+
+
+            <div class="category-boxes" data-aos="fade-up" data-aos-duration="3000">
+              <div class="row d-flex align-items-center justify-content-between">
+                <div class="col-lg-4">
+                  <div class="item-cat-det">
+                    <h4> 1 kg (32.151 troy oz) - Argor-Heraeus  -  </h4>
+                    <h5 class="sold-out">Out of stock</h5>
+                  
+                    
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  
+                </div>
+                <div class="col-lg-4 d-flex justify-content-center">
+                  <button class="head-btn-2">Notify</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="category-boxes" data-aos="fade-up" data-aos-duration="3000">
+              <div class="row d-flex align-items-center justify-content-between">
+                <div class="col-lg-4">
+                  <div class="item-cat-det">
+                    <h4> 1 kg (32.151 troy oz) - Argor-Heraeus  -  </h4>
+                    <h5 class="sold-out">Out of stock</h5>
+                  
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                 
+                </div>
+                <div class="col-lg-4 d-flex justify-content-center">
+                  <button class="head-btn-2">Notify</button>
+                </div>
               </div>
             </div>
           </div>
-    
+          
           <div class="category-box-wrapper">
+            <div class="row box-main-cntnt">
+              <div class="col-lg-6" data-aos="fade-right" data-aos-duration="3000">
+                <div class="inner-lists">
+                  <img src="assets/img/gold-2.png" alt="">
+                  <div>
+                    <h5>1 Kilogram Gold Bullion Bars</h5>
+                    <p>Manufacturer: Various</p>
+                    <p> Purity: 99.99%</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6" data-aos="fade-left" data-aos-duration="3000">
+                <div class="product-data">
+                  <ul>
+                    <li>1 Kilogram Gold Bullion Bars from manufacturers who are on the LBMA Good Delivery List.</li>
+                    <li>Each 1 Kilogram Gold Bullion Bar contains 1 Kilogram of liure gold minted at 99.99% liurity.</li>
+                    <li>1 Kilogram Gold Bullion Bars offers customers the more cost effective way to acquire Gold.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
             <div class="category-boxes" data-aos="fade-up" data-aos-duration="3000">
               <div class="row d-flex align-items-center justify-content-between">
                 <div class="col-lg-4">
@@ -464,7 +604,14 @@
 
 
 
+<script>
 
+    $(document).ready(function() {
+        $('#filterButton').click(function() {
+            $('#filterDiv').fadeToggle(500); 
+        });
+    });
+</script>
 
 
 
