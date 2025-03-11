@@ -472,6 +472,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // filter
 
+
 class ProductFilter {
   constructor() {
       this.products = document.querySelectorAll('.category-boxes');
@@ -502,13 +503,7 @@ class ProductFilter {
       });
   }
 
-  validatePriceInput(e) {
-      let value = parseInt(e.target.value);
-      if (isNaN(value)) value = 0;
-      if (value < 0) value = 0;
-      if (value > 100000) value = 100000;
-      e.target.value = value;
-  }
+  
 
   applyFilters() {
       const selectedWeights = Array.from(document.querySelectorAll('input[data-weight]:checked'))
