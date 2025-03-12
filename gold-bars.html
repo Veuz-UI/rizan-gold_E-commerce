@@ -142,85 +142,88 @@
 
   <section class="section-padding">
     <div class="custom-container">
+      <h4 class="center-title">Gold Bars</h4>
       <div class="row">
-        <div class="col-lg-8">
+        <div class="col-lg-2">
           <div class="filter-btn-section">
-              <div class="d-flex align-items-center gap-3 mb-2 justify-content-between">
-                <h4>Gold</h4>
-                <div>
-                  <button class="head-btn" id="filterButton">Filter Products <span><i class="fas fa-filter"></i></span></button>
-                <span class="filter-hint">71 matches with current filter</span>
-                </div>
+            <div class="d-flex gap-3 flex-column">
+              <div>
+                <button class="head-btn" id="filterButton">Filter Products <span><i class="fas fa-filter"></i></span></button>
+                <p class="filter-hint">71 matches with current filter</p>
               </div>
-            <section class="filter-section" id="filterDiv">
-              <div class="row">
-                <div class="col-lg-12">
-                    <div class="filters-wrapper">
-                      <div class="filter-groups">
-                        <!-- Weight Filter -->
-                        <div class="filter-group">
-                          <h5>Weight</h5>
-                          <div class="checkbox-group">
-                            <label><input type="checkbox" value="1kg" data-weight="1"> Less 1 oz</label>
-                            <label><input type="checkbox" value="500g" data-weight="0.5"> 1 oz g</label>
-                            <label><input type="checkbox" value="250g" data-weight="0.25"> More 1 oz</label>
-                          </div>
+            </div>
+          <section class="filter-section" id="filterDiv">
+            <div class="row">
+              <div class="col-lg-12">
+                  <div class="filters-wrapper">
+                    <div class="filter-groups">
+                      <!-- Weight Filter -->
+                      <div class="filter-group">
+                        <h5>Weight</h5>
+                        <div class="checkbox-group">
+                          <label><input type="checkbox" value="1kg" data-weight="1"> Less 1 oz</label>
+                          <label><input type="checkbox" value="500g" data-weight="0.5"> 1 oz g</label>
+                          <label><input type="checkbox" value="250g" data-weight="0.25"> More 1 oz</label>
                         </div>
-                        
-                        <!-- Manufacturer Filter -->
-                        <div class="filter-group">
-                          <h5>Issuing Country</h5>
-                          <div class="checkbox-group">
-                            <label><input type="checkbox" value="Metalor"> Switzerland</label>
-                            <label><input type="checkbox" value="Argor-Heraeus"> Australia </label>
-                            <label><input type="checkbox" value="PAMP"> Canada</label>
-                          </div>
-                        </div>
-                
-                        <div class="filter-group">
-                          <h5>Availability</h5>
-                          <div class="checkbox-group">
-                            <label><input type="checkbox" value="inStock"> In Stock</label>
-                            <label><input type="checkbox" value="outOfStock"> Out of Stock</label>
-                          </div>
-                        </div>
-                
-                        <div class="filter-group">
-                          <h5>Year</h5>
-                          <div class="checkbox-group">
-                            <label><input type="checkbox" value="Metalor"> 2025</label>
-                            <label><input type="checkbox" value="Argor-Heraeus"> 2024 </label>
-                            <label><input type="checkbox" value="PAMP"> Previous Years</label>
-                          </div>
-                        </div>
-                
-                        <!-- Price Range Filter -->
-                        <div class="filter-group">
-                          <h5>Price Range (USD)</h5>
-                          <div class="price-range">
-                            <div class="range-inputs">
-                              <input type="number" id="minPrice" placeholder="Min">
-                              <span>-</span>
-                              <input type="number" id="maxPrice" placeholder="Max">
-                            </div>
-                            <input type="range" id="priceSlider" min="0" max="100000" step="100" class="price-slider">
-                          </div>
-                        </div>
-                
-                        <!-- Availability Filter -->
-                        
                       </div>
-                
-                      <!-- Filter Actions -->
-                      <div class="filter-actions">
-                        <button id="applyFilters" class="head-btn">Apply Filters</button>
-                        <button id="resetFilters" class="head-btn-2">Reset</button>
+                      
+                      <!-- Manufacturer Filter -->
+                      <div class="filter-group">
+                        <h5>Issuing Country</h5>
+                        <div class="checkbox-group">
+                          <label><input type="checkbox" value="Metalor"> Switzerland</label>
+                          <label><input type="checkbox" value="Argor-Heraeus"> Australia </label>
+                          <label><input type="checkbox" value="PAMP"> Canada</label>
+                        </div>
                       </div>
+              
+                      <div class="filter-group">
+                        <h5>Availability</h5>
+                        <div class="checkbox-group">
+                          <label><input type="checkbox" value="inStock"> In Stock</label>
+                          <label><input type="checkbox" value="outOfStock"> Out of Stock</label>
+                        </div>
+                      </div>
+              
+                      <div class="filter-group">
+                        <h5>Year</h5>
+                        <div class="checkbox-group">
+                          <label><input type="checkbox" value="Metalor"> 2025</label>
+                          <label><input type="checkbox" value="Argor-Heraeus"> 2024 </label>
+                          <label><input type="checkbox" value="PAMP"> Previous Years</label>
+                        </div>
+                      </div>
+              
+                      <!-- Price Range Filter -->
+                      <div class="filter-group">
+                        <h5>Price Range (USD)</h5>
+                        <div class="price-range">
+                          <div class="range-inputs">
+                            <input type="number" id="minPrice" placeholder="Min">
+        
+                            <input type="number" id="maxPrice" placeholder="Max">
+                          </div>
+                          <input type="range" id="priceSlider" min="0" max="100000" step="100" class="price-slider">
+                        </div>
+                      </div>
+              
+                      <!-- Availability Filter -->
+                      
                     </div>
-                </div>
+              
+                    <!-- Filter Actions -->
+                    <div class="filter-actions">
+                      <button id="applyFilters" class="head-btn">Apply Filters</button>
+                      <button id="resetFilters" class="head-btn-2">Reset</button>
+                    </div>
+                  </div>
               </div>
-            </section>
-          </div>
+            </div>
+          </section>
+        </div>
+        </div>
+        <div class="col-lg-7">
+          
           
           <div class="category-box-wrapper">
             <div class="row box-main-cntnt">
@@ -248,18 +251,18 @@
 
             <div class="category-boxes" data-aos="fade-up" data-aos-duration="3000">
               <div class="row d-flex align-items-center justify-content-between">
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6">
                   <div class="item-cat-det">
-                    <a href="product-detail.html"><h4> 1 kg (32.151 troy oz) - Argor-Heraeus  -  </h4></a>
+                    <a href="product-detail.html"><h4> 1 kg (32.151 troy oz) - Argor-Heraeus vivnivivivji -  </h4></a>
                     <h5 class="sold-out">Out of stock</h5>
                   
                     
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6">
                   
                 </div>
-                <div class="col-lg-4 d-flex justify-content-center">
+                <div class="col-lg-4 col-md-6">
                   <button class="head-btn-2">Notify</button>
                 </div>
               </div>
@@ -277,7 +280,7 @@
                 <div class="col-lg-4">
                  
                 </div>
-                <div class="col-lg-4 d-flex justify-content-center">
+                <div class="col-lg-4 ">
                   <button class="head-btn-2">Notify</button>
                 </div>
               </div>
@@ -309,17 +312,17 @@
 
             <div class="category-boxes" data-aos="fade-up" data-aos-duration="3000">
               <div class="row d-flex align-items-center justify-content-between">
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6">
                   <div class="item-cat-det">
                     <a href="product-detail.html">
-                      <h4>1 kg (32.151 troy oz) - Metalor- </h4>
+                      <h4>1 kg (32.151 troy oz) - Metalor-12567 </h4>
                     </a>
                     <h5 class="in-stock">In stock: <span>42 bars</span></h5>
                     <h5 class="in-stock">In stock: <span>42 bars</span></h5>
                     <p>(10-03-2025)</p>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6">
                   <div class="gold-count">
                     <h6>1</h6>
                     <h6>US$94,150.36</h6>
@@ -335,7 +338,7 @@
                     <h6 class="color-yellow">US$93,927.43</h6>
                   </div>
                 </div>
-                <div class="col-lg-4 d-flex justify-content-center">
+                <div class="col-lg-4 col-md-6">
                   <div class="searchbox-wrap">
                     <input type="number" class="quantity-input" placeholder="Enter quantity">
                     <a href="cart.html">
@@ -354,7 +357,7 @@
 
             <div class="category-boxes" data-aos="fade-up" data-aos-duration="3000">
               <div class="row d-flex align-items-center justify-content-between">
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6">
                   <div class="item-cat-det">
                     <a href="product-detail.html"><h4> 1 kg (32.151 troy oz) - Argor-Heraeus  -  </h4></a>
                     <h5 class="sold-out">Out of stock</h5>
@@ -362,7 +365,7 @@
                     <p>(10-03-2025)</p>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6">
                   <div class="gold-count">
                     <h6>1</h6>
                     <h6>US$94,150.36</h6>
@@ -378,7 +381,7 @@
                     <h6 class="color-yellow">US$93,927.43</h6>
                   </div>
                 </div>
-                <div class="col-lg-4 d-flex justify-content-center">
+                <div class="col-lg-4 col-md-6">
                   <button class="head-btn-2">Notify </button>
                 </div>
               </div>
@@ -386,7 +389,7 @@
 
             <div class="category-boxes" data-aos="fade-up" data-aos-duration="3000">
               <div class="row d-flex align-items-center justify-content-between">
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6">
                   <div class="item-cat-det">
                     <a href="product-detail.html">
                       <h4> 1 kg (32.151 troy oz) - Argor-Heraeus  -  </h4>
@@ -396,7 +399,7 @@
                     <p>(10-03-2025)</p>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6">
                   <div class="gold-count">
                     <h6>1</h6>
                     <h6>US$94,150.36</h6>
@@ -412,7 +415,7 @@
                     <h6 class="color-yellow">US$93,927.43</h6>
                   </div>
                 </div>
-                <div class="col-lg-4 d-flex justify-content-center">
+                <div class="col-lg-4 col-md-6">
                   <button class="head-btn-2">Notify</button>
                 </div>
               </div>
@@ -420,7 +423,7 @@
 
             <div class="category-boxes" data-aos="fade-up" data-aos-duration="3000">
               <div class="row d-flex align-items-center justify-content-between">
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6">
                   <div class="item-cat-det">
                    <a href="product-detail.html">
                     <h4> 1 kg (32.151 troy oz) - Argor-Heraeus  -  </h4>
@@ -430,7 +433,7 @@
                     <p>(10-03-2025)</p>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6">
                   <div class="gold-count">
                     <h6>1</h6>
                     <h6>US$94,150.36</h6>
@@ -446,14 +449,14 @@
                     <h6 class="color-yellow">US$93,927.43</h6>
                   </div>
                 </div>
-                <div class="col-lg-4 d-flex justify-content-center">
+                <div class="col-lg-4 col-md-6">
                   <button class="head-btn-2">Notify</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-4" data-aos="fade-left" data-aos-duration="3000">
+        <div class="col-lg-3" data-aos="fade-left" data-aos-duration="3000">
           <div class="trading-widget-wrapper">
             <h4>Spot  Price Charts</h4>
             <div class="tradingview-widget-container">
