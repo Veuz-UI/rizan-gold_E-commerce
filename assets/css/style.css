@@ -537,6 +537,24 @@ img {
 	margin: 0px;
 }
 
+.language-box{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-right: 10px;
+}
+
+.language-box img{
+	width: 20px;
+}
+
+.language-box a h6 {
+	font-size: 14px;
+	font-weight: 300;
+	margin: 0px;
+	color: var(--white-color);
+}
+
 
 /* search */
 
